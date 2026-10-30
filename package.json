@@ -21,5 +21,8 @@
   },
   "devDependencies": {
     "hexo-cli": "^4.3.2"
+  },
+  "hexo": {
+    "version": "7.3.0"
   }
 }
