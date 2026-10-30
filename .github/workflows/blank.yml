@@ -30,8 +30,13 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --no-fund
 
+      - name: Verify Hexo CLI
+        run: npx hexo version
+
       - name: Generate Hexo site
-        run: npm run build
+        run: |
+          npm run build
+          test -f public/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
